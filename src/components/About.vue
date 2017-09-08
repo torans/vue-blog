@@ -1,7 +1,7 @@
 <style scoped>
   .container{
     text-align: right;
-    padding: 80px;
+    padding: 80px 0;
   }
   .container .title{
     padding:20px;
@@ -12,7 +12,7 @@
     margin-bottom: -186px;
   }
   .about{
-    padding: 20px;
+    padding: 20px 0;
     line-height: 28px;
   }
   .about p{
@@ -26,29 +26,31 @@
     margin-bottom: 20px;
   }
   .content{
-    padding: 20px;
+    /*padding: 20px;*/
     margin-top: 0px;
     font-size: 16px;
     line-height: 28px;
   }
   .content .shanchang{
-    margin-top: 40px;
+    margin: 40px 0;
+    font-size: 20px;
   }
   .content .hobby{
     margin-top: 40px;
     margin-bottom: 14px;
+    font-size: 20px;
   }
   .hobbies{
     font-size: 30px;
   }
   .hobbies span{
-    padding-right:10px;
+    /*padding-right:10px;*/
   }
 </style>
 <template>
   <div class="wrapper-container">
-    <div style="background:#eee;padding: 20px">
-      <Card :bordered="false" class="container">
+    <div>
+      <div class="container">
         <p slot="title" class="title">About Me</p>
         <div class="background-images">
           <img src="../../static/images/avatar.png">
@@ -82,14 +84,14 @@
           <p>特喜欢瞎几巴捣鼓新技术；//</p>
           <p>智商低，情商也感人；//</p>
           <p>处女座，强迫症晚期患者。//</p>
-         <div style="text-align: left">
-           <p class="shanchang">职业技能：</p>
-           <p>擅长Ae、Ai、Br、Dw、Fl、Fw、Id、Lr、Pr、PS等软件的安装与卸载;</p>
-           <p>精通Java、PHP、Python、NodeJS、Go、MySQL、Redis等单词的拼写;</p>
-           <p>全面阅读《MySQL：从删库到跑路》、《Python从入门到放弃》等救命书籍。</p>
+         <div style="text-align: right">
+           <p class="shanchang">职业技能</p>
+           <p>擅长Ae、Ai、Br、Dw、Fl、Fw、Id、Lr、Pr、PS等软件的安装与卸载</p>
+           <p>精通Java、PHP、Python、NodeJS、Go、MySQL、Redis等单词的拼写</p>
+           <p>全面阅读《MySQL：从删库到跑路》、《Python从入门到放弃》等救命书籍</p>
          </div>
 
-          <p class="hobby">兴趣爱好：</p>
+          <p class="hobby">兴趣爱好</p>
           <div class="hobbies">
             <span><Icon type="ios-game-controller-b"></Icon></span>
             <span><Icon type="ios-basketball"></Icon></span>
@@ -97,8 +99,7 @@
             <span><Icon type="ios-camera"></Icon></span>
           </div>
         </div>
-
-      </Card>
+      </div>
     </div>
 
   </div>

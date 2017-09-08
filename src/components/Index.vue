@@ -1,5 +1,11 @@
+
 <template>
   <div class="container index">
+    <div class="banner">
+      <div class="container">
+        <h1 class="slogan">Coding demo for coding life.</h1>
+      </div>
+    </div>
     <div class="loader" v-show="isLoading">
       <Spin fix>
         <Icon type="load-c" size=30 class="demo-spin-icon-load"></Icon>
@@ -9,15 +15,14 @@
     <ul>
       <li v-for="item in articles" class="list-item">
         <router-link v-bind:to="/detail/+'id/'+item.id" class="list-item-title">{{ item.title }}</router-link>
-        <p class="list-item-desc">{{ item.introduction }}</p>
+        <!--<p class="list-item-desc">{{ item.introduction }}</p>-->
         <div class="list-item-info">
                     <span class="list-item-time">
-                        <Icon type="ios-clock-outline"></Icon>
                         {{ item.create_time }}
                     </span>
-          <span class="list-item-tag">
-                         <Tag>{{ item.cate_id }}</Tag>
-                    </span>
+          <!--<span class="list-item-tag">-->
+                         <!--<Tag>{{ item.cate_id }}</Tag>-->
+                    <!--</span>-->
         </div>
       </li>
     </ul>
@@ -107,16 +112,30 @@
   a {
     color: #42b983;
   }
+  .banner{
+    /*background: #2c3e50;*/
+    padding: 80px 0;
+    text-align: left;
+  }
+
+  .banner .slogan{
+    /*font-size: 30px;*/
+    font-size: 1.975rem;
+    line-height: 38px;
+    font-weight: 300;
+    color: #444;
+  }
   .list-item{
     padding: 20px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
     display: block;
   }
   .list-item-title{
-    color: #464c5b;
-    font-size: 24px;
-    margin-bottom: 16px;
-    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 24px;
+    font-weight: normal;
+    margin-bottom: 7px;
+    color: #2D8CF1;
   }
   .list-item-title:hover{
     color: #57a3e8;
@@ -129,7 +148,10 @@
     margin-top: 16px;
   }
   .list-item-time{
-    color: #9ea7b4;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #bbb;
   }
   .list-item-tag{
     height: inherit;

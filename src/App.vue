@@ -3,8 +3,8 @@
     <div class="header">
       <Menu mode="horizontal" :theme="theme1" active-name="1">
         <div class="container">
-          <a href="/" class="router-link-active">
-            <img class="logo" src="../static/images/logo.png" alt="www.shetu.cc">
+          <a href="/" class="router-link-active webname">
+            Demo.Ran
           </a>
           <div class="nav-list">
             <MenuItem name="1">
@@ -25,11 +25,7 @@
           </div>
         </div>
       </Menu>
-      <div class="banner">
-        <div class="container">
-          <h1 class="slogan">十年寒窗苦读书,一举成名天下知</h1>
-        </div>
-      </div>
+
     </div>
     <router-view></router-view>
     <div class="footer">
@@ -58,14 +54,24 @@
     -moz-osx-font-smoothing: grayscale;
     /*text-align: center;*/
     color: #2c3e50;
+    font-size: 16px;
   }
   .logo{
     height: 60px;
     /*margin-top: 15px;*/
     float: left;
   }
+  .webname{
+    font-size: 2.0rem;
+    color: #2c3e50;
+    font-weight: 600;
+  }
   .header{
     color: #495060;
+    width: 100%;
+    background: #fff;
+    font-size: 16px;
+    margin-bottom: 24px;
   }
   .nav-list{
     float: right;
@@ -75,19 +81,12 @@
     color: #2c3e50;
     font-size: 14px;
   }
-  .header .banner{
-    background: #2c3e50;
-    padding: 30px 0;
-    text-align: left;
-  }
-  .header .banner .slogan{
-    color: #D8D7D5;
-    font-weight: 100;
-  }
+
   .footer{
     padding: 20px 0;
-    background: #2c3e50;
-    color: #ffffff;
+    background: #f5f5f5;
+    color: #aaa;
+    font-size: 14px;
 
   }
   .footer p{
@@ -98,18 +97,22 @@
     height: inherit;
     display: inline-block;
   }
-  @media (min-width: 1200px){
-    .container {
-      width: 60%;
-      margin: 0 auto;
-    }
+  .container {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 0.2rem;
   }
 
 
-  @media (min-width: 992px){
-
+  @media (max-width: 992px){
+    .webname{
+      font-size: 0.3rem;
+    }
   }
   @media (min-width: 768px){
 
+  }
+  .ivu-menu-horizontal.ivu-menu-light:after{
+    background: none;
   }
 </style>

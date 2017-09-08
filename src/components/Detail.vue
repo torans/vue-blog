@@ -11,10 +11,10 @@
         <h1 v-text="content.title" class="title"></h1>
         <div class="title-line"></div>
         <div class="info">
-          <p class="created">时间：{{ content.create_time }}</p>
-          <p class="category">分类：{{ content.cid }}</p>
-          <p class="author">作者：{{ content.author }}</p>
-          <p class="views">访问：{{content.reading }}</p>
+          <p class="created">{{ content.create_time }}</p>
+          <!--<p class="category">分类：{{ content.cid }}</p>-->
+          <!--<p class="author">作者：{{ content.author }}</p>-->
+          <!--<p class="views">访问：{{content.reading }}</p>-->
         </div>
         <article v-html="content.content" v-hljs></article>
       </div>
